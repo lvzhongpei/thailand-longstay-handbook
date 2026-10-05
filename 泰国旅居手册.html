@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰国旅居手册 · Thailand Long-Stay Handbook</title>
+<style>
+:root{
+  --bg:#FDFAF3;
+  --bg2:#FFFFFF;
+  --bg3:#F7F1E4;
+  --ink:#231B12;
+  --ink2:#5F5449;
+  --ink3:#8C8074;
+  --gold:#C08529;
+  --gold-2:#E3B45E;
+  --gold-soft:#FBF0D8;
+  --emerald:#0E7C6B;
+  --emerald-2:#2AA694;
+  --emerald-soft:#E2F2ED;
+  --coral:#C0392B;
+  --coral-soft:#FBEAE7;
+  --indigo:#2C4A87;
+  --indigo-soft:#E7EDF8;
+  --line:#EBE1D0;
+  --line2:#F3EBDC;
+  --shadow:0 1px 2px rgba(70,50,20,.05),0 8px 24px rgba(70,50,20,.06);
+  --shadow-lg:0 2px 6px rgba(70,50,20,.06),0 20px 48px rgba(70,50,20,.10);
+  --r:16px;
+  --r-s:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:15.5px;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(192,133,41,.07), transparent 38%),
+    radial-gradient(circle at 88% 4%, rgba(14,124,107,.06), transparent 34%);
+  background-attachment:fixed;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 100px}
+
+/* ---------- header ---------- */
+header.hero{
+  position:relative;
+  padding:56px 20px 44px;
+  text-align:center;
+  overflow:hidden;
+}
+header.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(45deg, rgba(192,133,41,.045) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(-45deg, rgba(192,133,41,.045) 0 1px, transparent 1px 16px);
+  mask-image:radial-gradient(ellipse at 50% 0%, #000 0%, transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse at 50% 0%, #000 0%, transparent 72%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;max-width:820px;margin:0 auto}
+.badge{
+  display:inline-block;
+  font-size:12px;letter-spacing:.22em;font-weight:700;
+  color:var(--gold);
+  border:1px solid var(--gold-2);
+  background:var(--gold-soft);
+  padding:5px 16px;border-radius:999px;
+  margin-bottom:20px;
+}
+h1{
+  font-size:clamp(30px,5.2vw,48px);
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-.01em;
+  background:linear-gradient(100deg,#8A5A16 0%,#C08529 42%,#0E7C6B 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:14px;
+}
+.hero-sub{color:var(--ink2);font-size:15px;max-width:640px;margin:0 auto 26px}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;font-size:12.5px}
+.meta-chip{
+  background:var(--bg2);border:1px solid var(--line);
+  padding:6px 13px;border-radius:999px;color:var(--ink2);
+  box-shadow:var(--shadow);
+}
+.meta-chip b{color:var(--ink);font-weight:650}
+
+/* ---------- alert ---------- */
+.alert{
+  display:flex;gap:13px;
+  background:var(--coral-soft);
+  border:1px solid #F2C9C2;
+  border-left:4px solid var(--coral);
+  border-radius:var(--r-s);
+  padding:15px 18px;
+  margin:0 auto 34px;
+  max-width:900px;
+  font-size:14px;color:#6B2C22;
+  line-height:1.7;
+}
+.alert .ic{font-size:18px;line-height:1.4;flex-shrink:0}
+.alert b{color:var(--coral)}
+
+/* ---------- tabs ---------- */
+.tabbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,250,243,.9);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+  margin-bottom:36px;
+}
+.tabbar-inner{
+  max-width:1120px;margin:0 auto;
+  display:flex;gap:4px;justify-content:safe center;
+  overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  padding:10px 20px;
+}
+.tabbar-inner::-webkit-scrollbar{display:none}
+.tab{
+  flex-shrink:0;
+  border:none;background:transparent;
+  font-family:inherit;font-size:13px;font-weight:600;
+  color:var(--ink2);
+  padding:7px 12px;border-radius:999px;
+  cursor:pointer;white-space:nowrap;
+  transition:all .18s ease;
+}
+.tab:hover{background:var(--bg3);color:var(--ink)}
+.tab.on{
+  background:linear-gradient(100deg,#8A5A16,#C08529);
+  color:#fff;
+  box-shadow:0 4px 14px rgba(192,133,41,.32);
+}
+.tab .n{opacity:.7;font-size:10.5px;margin-right:4px;font-weight:700}
+
+/* ---------- panels ---------- */
+.panel{display:none;animation:fade .32s ease}
+.panel.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+.sec-head{margin-bottom:26px}
+.sec-kicker{
+  font-size:11.5px;letter-spacing:.2em;font-weight:700;
+  color:var(--gold);text-transform:uppercase;margin-bottom:8px;
+}
+h2{font-size:clamp(22px,3.4vw,29px);font-weight:800;letter-spacing:-.01em;line-height:1.3;margin-bottom:10px}
+.sec-desc{color:var(--ink2);font-size:14.5px;max-width:800px}
+
+h3{font-size:18px;font-weight:750;margin:34px 0 14px;display:flex;align-items:center;gap:9px}
+h3::before{
+  content:"";width:4px;height:19px;border-radius:2px;
+  background:linear-gradient(180deg,var(--gold-2),var(--emerald));
+  flex-shrink:0;
+}
+h4{font-size:15.5px;font-weight:700;margin:22px 0 9px;color:var(--ink)}
+p{margin-bottom:12px;color:var(--ink2)}
+p b,li b,td b{color:var(--ink);font-weight:650}
+strong{color:var(--ink);font-weight:700}
+a{color:var(--emerald);text-decoration:none;border-bottom:1px solid rgba(14,124,107,.3)}
+a:hover{border-bottom-color:var(--emerald)}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--r);padding:22px 24px;
+  box-shadow:var(--shadow);margin-bottom:18px;
+}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+
+.stat{
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--r-s);padding:16px 18px;
+  box-shadow:var(--shadow);
+}
+.stat .k{font-size:11.5px;color:var(--ink3);letter-spacing:.06em;font-weight:600;margin-bottom:5px}
+.stat .v{font-size:21px;font-weight:800;color:var(--ink);line-height:1.25;letter-spacing:-.01em}
+.stat .v small{font-size:12.5px;font-weight:600;color:var(--ink3)}
+.stat .d{font-size:12.5px;color:var(--ink3);margin-top:4px}
+
+/* ---------- visa cards ---------- */
+.vcard{
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--shadow);
+  overflow:hidden;margin-bottom:14px;
+  transition:box-shadow .2s ease;
+}
+.vcard:hover{box-shadow:var(--shadow-lg)}
+.vcard-top{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:11px;
+  padding:16px 20px;
+  border-bottom:1px solid var(--line2);
+  background:linear-gradient(100deg,var(--gold-soft),rgba(226,242,237,.5));
+}
+.vcard-top .nm{font-size:16.5px;font-weight:800}
+.vcard-top .en{font-size:12px;color:var(--ink3);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em}
+.tag{
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  letter-spacing:.02em;white-space:nowrap;
+}
+.t-gold{background:var(--gold-soft);color:#8A5A16;border:1px solid var(--gold-2)}
+.t-em{background:var(--emerald-soft);color:#0A5D50;border:1px solid #A9DBCE}
+.t-ind{background:var(--indigo-soft);color:#25407A;border:1px solid #BCCCEC}
+.t-gray{background:#F1EEE8;color:#6B6157;border:1px solid #E2DACE}
+.vcard-body{padding:18px 20px}
+.kv{display:grid;grid-template-columns:88px 1fr;gap:6px 14px;font-size:14px;margin-bottom:12px}
+.kv dt{color:var(--ink3);font-weight:600;font-size:12.5px;padding-top:2px}
+.kv dd{color:var(--ink2)}
+.kv dd b{color:var(--ink)}
+.fit{
+  background:var(--bg3);border-radius:var(--r-s);
+  padding:12px 15px;font-size:13.5px;color:var(--ink2);
+  border-left:3px solid var(--emerald);
+}
+.fit b{color:var(--emerald);font-weight:700}
+.warn{
+  background:var(--coral-soft);border-radius:var(--r-s);
+  padding:12px 15px;font-size:13.5px;color:#6B2C22;
+  border-left:3px solid var(--coral);margin-top:10px;
+}
+.warn b{color:var(--coral)}
+.note{
+  background:var(--indigo-soft);border-radius:var(--r-s);
+  padding:12px 15px;font-size:13.5px;color:#243E73;
+  border-left:3px solid var(--indigo);margin-top:10px;
+}
+
+/* ---------- table ---------- */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-s);background:var(--bg2);margin-bottom:18px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:620px}
+th{
+  background:linear-gradient(180deg,#FBF5E9,#F7EFDF);
+  text-align:left;font-weight:700;color:var(--ink);
+  padding:12px 14px;border-bottom:1px solid var(--line);
+  font-size:12.5px;letter-spacing:.03em;white-space:nowrap;
+}
+td{padding:12px 14px;border-bottom:1px solid var(--line2);color:var(--ink2);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#FDFBF6}
+td.first{font-weight:700;color:var(--ink);white-space:nowrap}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.ok{color:var(--emerald);font-weight:700}
+.no{color:var(--coral);font-weight:700}
+.mid{color:var(--gold);font-weight:700}
+
+/* ---------- lists ---------- */
+ul,ol{margin:0 0 14px 0;padding-left:0;list-style:none}
+ul li,ol li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--ink2);font-size:14.5px}
+ul li::before{
+  content:"";position:absolute;left:6px;top:9px;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold-2);
+}
+ul.chk li::before{
+  content:"✓";position:absolute;left:0;top:0;
+  width:auto;height:auto;background:none;border-radius:0;
+  color:var(--emerald);font-weight:800;font-size:13px;
+}
+ol{counter-reset:ol}
+ol li{counter-increment:ol;padding-left:30px}
+ol li::before{
+  content:counter(ol);position:absolute;left:0;top:2px;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--gold-soft);color:#8A5A16;
+  font-size:11.5px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--gold-2);
+}
+
+/* ---------- live badge ---------- */
+.live{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;color:var(--coral);
+  letter-spacing:.08em;margin-bottom:10px;
+}
+.live::before{
+  content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--coral);animation:pulse 1.6s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+
+/* ---------- quiz ---------- */
+.quiz{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:26px 26px 24px}
+.qprog{display:flex;gap:5px;margin-bottom:22px}
+.qprog i{height:5px;flex:1;border-radius:3px;background:var(--line);transition:background .3s}
+.qprog i.done{background:linear-gradient(90deg,var(--gold-2),var(--emerald-2))}
+.qstep{display:none}
+.qstep.on{display:block;animation:fade .3s ease}
+.qtitle{font-size:17.5px;font-weight:750;margin-bottom:6px}
+.qhint{font-size:13px;color:var(--ink3);margin-bottom:18px}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.opt{
+  text-align:left;background:var(--bg);border:1.5px solid var(--line);
+  border-radius:var(--r-s);padding:14px 16px;
+  cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);
+  transition:all .16s ease;
+}
+.opt:hover{border-color:var(--gold-2);background:var(--gold-soft);transform:translateY(-1px)}
+.opt .ol2{display:block;font-size:12.5px;color:var(--ink3);margin-top:3px}
+.opt.sel{border-color:var(--emerald);background:var(--emerald-soft);box-shadow:0 0 0 3px rgba(14,124,107,.1)}
+.qnav{display:flex;gap:10px;margin-top:22px;align-items:center}
+.btn{
+  font-family:inherit;font-size:14px;font-weight:650;
+  border-radius:999px;padding:10px 22px;cursor:pointer;
+  border:1px solid var(--line);background:var(--bg2);color:var(--ink);
+  transition:all .16s ease;
+}
+.btn:hover{border-color:var(--gold-2)}
+.btn.primary{
+  background:linear-gradient(100deg,#8A5A16,#C08529);color:#fff;border:none;
+  box-shadow:0 4px 14px rgba(192,133,41,.3);
+}
+.btn.primary:hover{transform:translateY(-1px);box-shadow:0 7px 20px rgba(192,133,41,.4)}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.sm{padding:7px 15px;font-size:13px}
+#qresult{display:none;margin-top:8px}
+.res-card{
+  border:1.5px solid var(--emerald);border-radius:var(--r);
+  background:linear-gradient(160deg,var(--emerald-soft),rgba(251,240,216,.55));
+  padding:22px 24px;
+}
+.res-card .rk{font-size:11.5px;letter-spacing:.16em;font-weight:800;color:var(--emerald);margin-bottom:8px}
+.res-card h4{margin:0 0 4px;font-size:20px}
+.res-card .ren{font-size:12px;color:var(--ink3);margin-bottom:14px;font-family:ui-monospace,monospace}
+.res-card .rwhy{font-size:14px;color:var(--ink2);margin-bottom:14px}
+.ralt{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink2)}
+
+/* ---------- calculator ---------- */
+.calc{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:24px}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--ink2);margin-bottom:8px;letter-spacing:.03em}
+.seg{display:flex;flex-wrap:wrap;gap:7px}
+.seg button{
+  font-family:inherit;font-size:13px;font-weight:600;
+  border:1.5px solid var(--line);background:var(--bg);
+  color:var(--ink2);padding:8px 14px;border-radius:999px;cursor:pointer;
+  transition:all .15s ease;
+}
+.seg button:hover{border-color:var(--gold-2)}
+.seg button.on{background:linear-gradient(100deg,#8A5A16,#C08529);color:#fff;border-color:transparent}
+.calc-out{
+  background:linear-gradient(165deg,#FFFDF8,#FBF3E3);
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 24px;
+}
+.calc-total{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.calc-total .big{font-size:clamp(28px,5vw,38px);font-weight:800;letter-spacing:-.02em;color:var(--emerald)}
+.calc-total .unit{font-size:14px;color:var(--ink3);font-weight:600}
+.calc-cny{font-size:14px;color:var(--ink2);margin-bottom:18px}
+.bars{display:flex;height:14px;border-radius:7px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line)}
+.bars i{display:block;height:100%}
+.leg{display:grid;gap:9px}
+.leg-row{display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:center;font-size:13.5px}
+.leg-row .dot{width:10px;height:10px;border-radius:3px}
+.leg-row .lv{color:var(--ink2)}
+.leg-row .ln{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);white-space:nowrap}
+.leg-row .ln small{font-weight:500;color:var(--ink3);font-size:11.5px;margin-left:5px}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;padding-left:30px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--gold-2),var(--emerald-2))}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{
+  content:"";position:absolute;left:-27px;top:6px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--bg2);border:3px solid var(--gold);
+}
+.tl-when{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.08em;margin-bottom:6px}
+.tl-item h4{margin:0 0 8px;font-size:15.5px}
+
+/* ---------- check items ---------- */
+.ck{
+  display:flex;gap:11px;align-items:flex-start;
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--r-s);padding:12px 15px;margin-bottom:8px;
+  cursor:pointer;transition:all .15s ease;
+}
+.ck:hover{border-color:var(--gold-2);background:#FFFDF7}
+.ck input{display:none}
+.ck .box{
+  width:19px;height:19px;border-radius:5px;flex-shrink:0;
+  border:2px solid var(--line);margin-top:3px;
+  transition:all .15s ease;position:relative;
+}
+.ck input:checked+.box{background:var(--emerald);border-color:var(--emerald)}
+.ck input:checked+.box::after{
+  content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:12px;font-weight:800;
+}
+.ck-txt{font-size:14px;color:var(--ink2);line-height:1.6}
+.ck input:checked~.ck-txt{color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--line)}
+.ck-txt b{display:block;color:var(--ink);font-weight:650;margin-bottom:2px}
+.ck-txt span{font-size:12.5px;color:var(--ink3)}
+
+/* ---------- phrase ---------- */
+.ph{display:grid;gap:10px}
+.ph-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  background:var(--bg2);border:1px solid var(--line);
+  border-left:3px solid var(--gold-2);
+  border-radius:var(--r-s);padding:12px 16px;
+}
+.ph-cn{font-size:14px;color:var(--ink);font-weight:600}
+.ph-th{font-size:13px;color:var(--ink2)}
+.ph-th i{display:block;font-style:normal;font-size:12px;color:var(--ink3);margin-top:2px}
+.ph-note{font-size:12px;color:var(--coral);margin-top:3px}
+
+/* ---------- emergency ---------- */
+.em{
+  display:flex;align-items:center;gap:13px;
+  background:var(--bg2);border:1px solid var(--line);
+  border-radius:var(--r-s);padding:13px 16px;
+}
+.em .no2{
+  font-size:19px;font-weight:800;color:var(--emerald);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+  min-width:104px;
+}
+.em .lb{font-size:13.5px;color:var(--ink);font-weight:600}
+.em .lb span{display:block;font-size:12px;color:var(--ink3);font-weight:400}
+
+footer{
+  margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3);line-height:1.9;
+}
+footer b{color:var(--ink2)}
+.src{font-size:12px;color:var(--ink3);margin-top:6px}
+.src code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--bg3);padding:1px 6px;border-radius:4px;font-size:11.5px;color:var(--ink2);
+}
+
+@media (max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:0 15px 70px}
+  .card,.quiz,.calc{padding:18px 17px}
+  .kv{grid-template-columns:1fr;gap:0 0}
+  .kv dt{margin-top:8px}
+  .ph-row{grid-template-columns:1fr;gap:6px}
+  .em{flex-direction:column;align-items:flex-start;gap:4px}
+  .em .no2{font-size:17px;min-width:0}
+  .tabbar-inner{padding:10px 15px}
+  table{font-size:12.5px}
+  th,td{padding:10px 11px}
+}
+@media print{
+  .tabbar{display:none}
+  .panel{display:block!important;page-break-before:always}
+  .panel:first-of-type{page-break-before:avoid}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="badge">THAILAND · LONG-STAY HANDBOOK</div>
+    <h1>泰国旅居手册</h1>
+    <p class="hero-sub">从「能不能待」到「怎么待得住」——签证、落地手续、城市选择、生活成本、医疗、税务与避坑，一份可以反复查的个人决策手册。</p>
+    <div class="meta-row">
+      <span class="meta-chip">政策核对 <b>2026年10月5日</b></span>
+      <span class="meta-chip">参考汇率 <b>1 元 ≈ 5.0 铢</b></span>
+      <span class="meta-chip">适用身份 <b>中国护照 · 单人</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="alert">
+    <div class="ic">⚠️</div>
+    <div>
+      <b>先看这一条：60天免签没了。</b>泰国自 <b>2026年9月15日</b> 起取消面向93个国家/地区的单方面60天免签。中泰互免协定继续有效，所以中国公民赴泰仍免签，但停留期回到 <b>单次不超过30天、每180天累计不超过90天</b>。想待更久，必须提前办对应签证——落地后再想办法，成本和风险都高得多。
+    </div>
+  </div>
+
+  <nav class="tabbar">
+    <div class="tabbar-inner" id="tabbar">
+      <button class="tab on" data-p="p1"><span class="n">01</span>国家概览</button>
+      <button class="tab" data-p="p2"><span class="n">02</span>签证全景</button>
+      <button class="tab" data-p="p3"><span class="n">03</span>该办哪个</button>
+      <button class="tab" data-p="p4"><span class="n">04</span>办理流程</button>
+      <button class="tab" data-p="p5"><span class="n">05</span>落地手续</button>
+      <button class="tab" data-p="p6"><span class="n">06</span>城市对比</button>
+      <button class="tab" data-p="p7"><span class="n">07</span>生活成本</button>
+      <button class="tab" data-p="p8"><span class="n">08</span>医疗保险</button>
+      <button class="tab" data-p="p9"><span class="n">09</span>税务资金</button>
+      <button class="tab" data-p="p10"><span class="n">10</span>应急短语</button>
+      <button class="tab" data-p="p11"><span class="n">11</span>时间线清单</button>
+    </div>
+  </nav>
+
+<!-- ========== 01 概览 ========== -->
+<section class="panel on" id="p1">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 01</div>
+    <h2>泰国是个什么样的国家</h2>
+    <p class="sec-desc">不是旅游宣传页。下面这些数字和事实，直接决定你能不能待、待在哪、花多少钱。</p>
+  </div>
+
+  <div class="grid g4" style="margin-bottom:26px">
+    <div class="stat"><div class="k">正式国名</div><div class="v" style="font-size:17px">泰王国</div><div class="d">Kingdom of Thailand · ราชอาณาจักรไทย</div></div>
+    <div class="stat"><div class="k">首都 / 最大城市</div><div class="v" style="font-size:17px">曼谷 Bangkok</div><div class="d">泰语 กรุงเทพฯ，官方全名长达167个字母</div></div>
+    <div class="stat"><div class="k">人口 / 面积</div><div class="v">约 7,000 <small>万</small></div><div class="d">51.3 万平方公里，与四川 + 重庆相当</div></div>
+    <div class="stat"><div class="k">货币</div><div class="v" style="font-size:17px">泰铢 THB ฿</div><div class="d">2026年10月：1 元 ≈ 5.0 铢</div></div>
+    <div class="stat"><div class="k">时区</div><div class="v" style="font-size:17px">UTC+7</div><div class="d">比北京时间晚 1 小时</div></div>
+    <div class="stat"><div class="k">语言</div><div class="v" style="font-size:17px">泰语</div><div class="d">旅游区英语可用；政府办事基本靠翻译</div></div>
+    <div class="stat"><div class="k">宗教</div><div class="v" style="font-size:17px">上座部佛教</div><div class="d">约 93% 信奉；僧侣地位极高</div></div>
+    <div class="stat"><div class="k">政体</div><div class="v" style="font-size:17px">君主立宪制</div><div class="d">国王为国家元首，涉王室言论法律极严</div></div>
+  </div>
+
+  <h3>为什么适合旅居</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h4 style="margin-top:0">① 生活成本便宜，但不是「到处都便宜」</h4>
+      <p>街边一餐 40–70 铢（约 8–14 元），一杯手冲 60–90 铢。但进口奶酪、红酒、西餐、国际学校、私立医院是按国际市场定价的。真正的分水岭不在国家，而在<b>你住在哪、过着哪一种生活</b>。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">② 医疗水平在东南亚第一梯队</h4>
+      <p>曼谷的 Bumrungrad、Bangkok Hospital 等 JCI 认证医院，英语服务成熟，费用约为美国的 20–40%。这是很多人真正留下来的原因——<b>不是便宜，是「付得起的好医疗」</b>。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">③ 签证体系对长期居留越来越"产品化"</h4>
+      <p>从免签、旅游签，到 DTV（数字游民 5 年）、退休签、LTR（10 年）、精英签（5–20 年），泰国把"长住资格"做成了明码标价的商品。<b>钱能解决的问题，基本都有对应通道</b>——但每类签证的门槛和限制完全不同，选错就是浪费。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">④ 地理与气候：便利，但要接受三件事</h4>
+      <p>飞行 3–5 小时覆盖大部分东亚、东南亚。代价是：<b>全年高温高湿</b>（4月最热可达 40°C+）、<b>北部烧芭季</b>（2–4 月清迈 PM2.5 常年爆表）、<b>雨季通勤</b>（5–10 月午后暴雨）。</p>
+    </div>
+  </div>
+
+  <h3>必须提前知道的"红线"</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>事项</th><th>规则</th><th>后果 / 说明</th></tr></thead>
+      <tbody>
+        <tr><td class="first">王室与君主制</td><td>严禁任何形式的公开批评、戏谑、讨论</td><td><span class="no">刑法第112条</span>，最高可判 15 年。外国人同样适用，且是泰国唯一的"绝对禁区"</td></tr>
+        <tr><td class="first">毒品</td><td>大麻 2025 年起重新收紧为需处方；其他毒品零容忍</td><td>持有或贩运可判死刑。切勿代收任何来路不明的包裹</td></tr>
+        <tr><td class="first">无证工作</td><td>免签、旅游签均<b>不得</b>从事任何有偿工作</td><td>遣返 + 1–10 年禁止入境。给泰国客户做远程服务同样属于灰色地带</td></tr>
+        <tr><td class="first">逾期停留</td><td>超过许可停留期即违法</td><td>罚款 500 铢/天（上限 20,000 铢）+ <span class="no">自动禁入境 1–10 年</span>，按超期时长递增</td></tr>
+        <tr><td class="first">僧侣与佛像</td><td>女性不得触碰僧侣；佛像不可用脚指、不可带走出境</td><td>视为严重失礼；佛像出境属违法</td></tr>
+        <tr><td class="first">电子烟</td><td>进口、销售、持有均违法</td><td>可被罚款或拘留。入境携带可能被没收并罚款</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>一句话总结：</b>泰国对外国人"友好但不好糊弄"。日常极便利、门槛极低；但只要碰到移民、税务、房地产、言论这四块，规则是硬的，且执行越来越数字化（TDAC、TM30、90天报到已经联网挂钩）。
+  </div>
+</section>
+
+<!-- ========== 02 签证全景 ========== -->
+<section class="panel" id="p2">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 02</div>
+    <h2>签证全景图</h2>
+    <p class="sec-desc">先把所有选项摊开。按"能待多久 + 需要什么身份"排序，从最轻到最重。</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>签证</th><th>停留期</th><th>核心门槛</th><th>能否工作</th><th>费用（铢）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="first">免签入境</td><td class="num">30 天<br><small>每180天累计≤90天</small></td><td>中国护照有效期 ≥6 个月</td><td class="no">不可</td><td class="num">0</td></tr>
+        <tr><td class="first">落地签 VOA</td><td class="num">15 天</td><td>返程机票 + 2,000 铢现金</td><td class="no">不可</td><td class="num">2,000</td></tr>
+        <tr><td class="first">旅游签 TR</td><td class="num">60 天<br><small>可境内延30天</small></td><td>资金证明 + 机酒订单</td><td class="no">不可</td><td class="num">2,000 单 / 5,000 多</td></tr>
+        <tr><td class="first">Non-B 工作签</td><td class="num">90 天 → 转 1 年</td><td>泰国雇主 offer + 工作证</td><td class="ok">可以</td><td class="num">2,000 单 / 5,000 多</td></tr>
+        <tr><td class="first">Non-ED 学生签</td><td class="num">90 天 → 按学制延</td><td>教育部认可院校录取函</td><td class="mid">仅实习/受限</td><td class="num">2,000</td></tr>
+        <tr><td class="first">Non-O 依亲/退休</td><td class="num">90 天 → 延 1 年</td><td>泰籍配偶/子女，或 50 岁+</td><td class="no">不可</td><td class="num">2,000</td></tr>
+        <tr><td class="first">Non-O-A 退休长居</td><td class="num">1 年多次</td><td>50 岁 + 80 万铢 + 保险 300 万铢</td><td class="no">不可</td><td class="num">5,000</td></tr>
+        <tr><td class="first">DTV 数字游民</td><td class="num">5 年<br><small>每次180天，可再延180天</small></td><td>境外远程收入 + 50 万铢资产</td><td class="mid">只为境外雇主工作</td><td class="num">10,000</td></tr>
+        <tr><td class="first">LTR 长期居留</td><td class="num">10 年（5+5）</td><td>BOI 审核：资产/收入/雇主达标</td><td class="ok">可（含数字工作证）</td><td class="num">50,000</td></tr>
+        <tr><td class="first">精英签 Privilege</td><td class="num">5–20 年</td><td>无年龄、无收入要求，纯付费</td><td class="no">不可</td><td class="num">65万–500万</td></tr>
+        <tr><td class="first">Smart Visa</td><td class="num">1–4 年</td><td>泰国目标产业专家/投资人</td><td class="ok">可以</td><td class="num">视类别</td></tr>
+        <tr><td class="first">Non-O-X</td><td class="num">5+5 年</td><td>300 万铢 + <span class="no">仅14国国籍</span></td><td class="no">不可</td><td class="num">15,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">费用为 e-Visa 官方规费（单次/多次），不含中介、翻译、公证、保险等。O-X 的 14 个国家不包含中国，中国护照不适用。</p>
+
+  <h3>逐个说清楚</h3>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">免签入境</span><span class="en">Visa Exemption</span><span class="tag t-gray">30 天</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>依据</dt><dd>《中泰互免持普通护照人员签证协定》，2024年3月1日生效，<b>继续有效</b></dd>
+        <dt>停留</dt><dd>单次 ≤30 天；任意 180 天内累计 ≤90 天</dd>
+        <dt>事由</dt><dd>旅游、探亲等协定规定事由</dd>
+        <dt>落地要求</dt><dd>护照有效期 ≥6 个月 + 返程/续程机票 + <b>提前填妥 TDAC</b></dd>
+        <dt>抽查</dt><dd>可能被要求出示资金：免签口径约 <b>10,000 铢/人</b>、20,000 铢/家庭</dd>
+      </dl>
+      <div class="warn"><b>不能靠"出境再入境"无限刷。</b>2026年9月15日后的新规下，180天内累计超过90天即违规；陆路口岸还有每自然年限 2 次的免签入境限制。想长期待，走正式签证。</div>
+      <div class="fit"><b>适合：</b>先来探路 1–3 个月、看城市、看租房、考察清楚再决定办哪类长期签证。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">旅游签</span><span class="en">Tourist Visa (TR)</span><span class="tag t-ind">60 天</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>停留</dt><dd>60 天，可在境内向移民局再延 30 天（TM.7，1,900 铢）</dd>
+        <dt>费用</dt><dd>单次 2,000 铢 / 多次（6个月）5,000 铢</dd>
+        <dt>材料</dt><dd>护照首页、白底 4×6cm 彩照、往返机票、住宿证明、银行流水（各领区要求 1 万元起不等）、行程单</dd>
+        <dt>审理</dt><dd>快则 3–5 个工作日，旺季 10–15 个工作日</dd>
+      </dl>
+      <div class="note"><b>领区注意：</b>泰国在华有 8 个领区（北京、上海、广州、成都、昆明、西安、厦门、南宁）。跨领区递交要补当地居住/工作证明，否则直接退回。按户籍或常住地就近递。</div>
+      <div class="fit"><b>适合：</b>计划待 2–3 个月、想覆盖 30 天免签不够用的情形。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">DTV 数字游民签</span><span class="en">Destination Thailand Visa</span><span class="tag t-em">5 年 · 主力推荐</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>有效期</dt><dd>5 年，多次入境</dd>
+        <dt>停留</dt><dd>每次入境 180 天，可在境内再延 180 天 → 单次最长连续待 <b>360 天</b>，然后必须出境再入境</dd>
+        <dt>门槛</dt><dd>年满 20 岁 + 证明持有 <b>500,000 铢</b>（约 10 万元）可用资金，通常要求申请前已持有约 3 个月</dd>
+        <dt>身份</dt><dd>① 为境外雇主或境外客户提供远程服务；② 参加获批的泰国"软实力"活动（泰拳、泰式料理、康养、医疗等）</dd>
+        <dt>费用</dt><dd>10,000 铢</dd>
+        <dt>审理</dt><dd>约 5–15 个工作日（比普通旅游签慢，会核查雇佣与资金文件）</dd>
+        <dt>家属</dt><dd>配偶及 20 岁以下子女可随行申请</dd>
+      </dl>
+      <div class="warn">
+        <b>三条硬限制：</b>（1）<b>不能为泰国公司工作、不能接泰国客户</b>；（2）<b>拿不到泰国工作证</b>；（3）DTV <b>在多数泰国银行开不了户</b>——开泰银行（KBank）已明文把 DTV 列入不予开户类别。另有 2026 年起"泰语学校不再作为合格活动"的说法，以官方获批清单为准。申请前务必确认自己属于哪一类。
+      </div>
+      <div class="fit"><b>适合：</b>有稳定境外远程收入、不想被 30 天免签追着跑的人。这是目前中文互联网上最适合"旅居型"身份的签证。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">Non-O-A 退休长居签</span><span class="en">Long Stay Retirement Visa</span><span class="tag t-gold">1 年 · 可年续</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>年龄</dt><dd>50 岁及以上</dd>
+        <dt>资金</dt><dd>三选一：<b>泰国银行 80 万铢</b> / 月收入 <b>6.5 万铢</b> / 两者组合合计 80 万铢</dd>
+        <dt>资金存期</dt><dd>首次申请：存入满 <b>2 个月</b>；年续：满 <b>3 个月</b>，且续期后 3 个月内余额不得低于 40 万铢</dd>
+        <dt>保险</dt><dd><b>强制</b>。官方最新口径为每保单年 ≥100,000 美元或 300 万铢（部分移民局按 400,000 铢住院 + 40,000 铢门诊执行）</dd>
+        <dt>其他</dt><dd>无犯罪记录证明、体检证明、护照有效期 ≥18 个月</dd>
+        <dt>费用</dt><dd>5,000 铢</dd>
+      </dl>
+      <div class="warn"><b>两个最常踩的坑：</b>① 资金存期——转账太晚或存期内余额掉下去，续期直接被拒；② 续期时 80 万铢必须在<b>泰国</b>银行账户里，海外账户不被接受。</div>
+      <div class="fit"><b>适合：</b>50 岁以上、有稳定退休金或储蓄、打算长期定居的人。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">LTR 长期居留签</span><span class="en">Long-Term Resident Visa</span><span class="tag t-ind">10 年 · 顶配</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>主管</dt><dd>BOI（投资促进委员会），不走普通移民局通道</dd>
+        <dt>四类</dt><dd>① 富裕全球公民 ② 富裕退休者 ③ 泰国远程工作者 ④ 高技能专业人士</dd>
+        <dt>富裕退休者</dt><dd>50 岁+，被动收入 ≥80,000 美元/年；或 40,000 美元 + 25 万美元泰国投资</dd>
+        <dt>远程工作者</dt><dd>个人年收入 ≥80,000 美元（近两年）；雇主年营收门槛已从 1.5 亿美元降至 <b>5,000 万美元</b>；工作年限要求已取消</dd>
+        <dt>保险</dt><dd>≥50,000 美元，或 100,000 美元存款（存满 12 个月）</dd>
+        <dt>费用</dt><dd>50,000 铢（含数字工作证）</dd>
+      </dl>
+      <div class="note"><b>LTR 真正的价值在税务：</b>符合类别的持有者，<b>境外收入汇入泰国免税</b>；高技能类别本地收入按 17% 固定税率。此外 90 天报到改为<b>一年一次</b>，无需回头签，含工作许可且不受"4 名泰国员工配 1 名外国人"限制。</div>
+      <div class="fit"><b>适合：</b>收入或资产达标的人。如果你是"高收入远程工作者"，LTR 比 DTV 待遇高一个量级——但门槛也高一个量级。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">泰国精英签</span><span class="en">Thailand Privilege Card</span><span class="tag t-gold">5–20 年 · 纯付费</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>特点</dt><dd><b>无年龄、无收入、无学历、无雇佣要求</b>，通过背景审查即可</dd>
+        <dt>权益</dt><dd>多次入境、无需回头签、机场快速通道、礼宾协助 90 天报到、开户更容易</dd>
+      </dl>
+      <div class="tw" style="margin:12px 0 12px">
+        <table style="min-width:460px">
+          <thead><tr><th>档位</th><th>年限</th><th>费用（铢）</th><th>约合人民币</th></tr></thead>
+          <tbody>
+            <tr><td class="first">Bronze 青铜</td><td class="num">5 年</td><td class="num">650,000</td><td class="num">≈ 13 万</td></tr>
+            <tr><td class="first">Gold 黄金</td><td class="num">5 年</td><td class="num">900,000</td><td class="num">≈ 18 万</td></tr>
+            <tr><td class="first">Platinum 铂金</td><td class="num">10 年</td><td class="num">1,500,000</td><td class="num">≈ 30 万</td></tr>
+            <tr><td class="first">Diamond 钻石</td><td class="num">15 年</td><td class="num">2,500,000</td><td class="num">≈ 50 万</td></tr>
+            <tr><td class="first">Reserve 至尊</td><td class="num">20 年</td><td class="num">5,000,000</td><td class="num">≈ 100 万</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><b>2026 时效提醒：</b>Bronze 档申请期已延长至 <b>2026年12月31日</b>，之后是否有该档位尚无公告。背景审查通常需 4–6 周，要办请提早。</div>
+      <div class="fit"><b>适合：</b>不想准备一堆资金证明和保险、愿意用钱换确定性的人。但注意：精英签<b>不能工作</b>，也不能用于退休签的 80 万铢资金通道。</div>
+    </div>
+  </div>
+
+  <div class="vcard">
+    <div class="vcard-top"><span class="nm">Non-B 工作签 / Non-ED 学生签</span><span class="en">Work &amp; Education</span><span class="tag t-gray">90 天起步</span></div>
+    <div class="vcard-body">
+      <dl class="kv">
+        <dt>Non-B</dt><dd>需泰国雇主 offer。入境后由雇主协助转为 1 年期，并单独申请<b>工作证（Work Permit）</b>。<b>没有工作证，任何形式的受雇工作都是违法</b></dd>
+        <dt>Non-ED</dt><dd>需教育部认可院校录取函。语言学校走 ED 的路径近年审核明显收紧，且不能合法打工</dd>
+      </dl>
+      <div class="warn"><b>别把"商务考察"当工作签。</b>只是开会、参展、谈合作，旅游签/免签即可；一旦涉及在泰取酬，必须 Non-B + 工作证。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 该办哪个 ========== -->
+<section class="panel" id="p3">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 03</div>
+    <h2>你该办哪个签证</h2>
+    <p class="sec-desc">回答 5 个问题，直接给你主推方案 + 备选方案。答案只在你的浏览器里计算，不会上传。</p>
+  </div>
+
+  <div class="quiz">
+    <div class="qprog" id="qprog"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <div class="qstep on" data-q="0">
+      <div class="qtitle">1 / 5　你的年龄</div>
+      <div class="qhint">退休类签证有 50 岁的硬门槛。</div>
+      <div class="opts">
+        <button class="opt" data-k="age" data-v="lt20">20 岁以下<span class="ol2">基本只能跟家人随行或走学生签</span></button>
+        <button class="opt" data-k="age" data-v="20to49">20–49 岁<span class="ol2">DTV / 工作签 / 精英签的主场</span></button>
+        <button class="opt" data-k="age" data-v="50plus">50 岁及以上<span class="ol2">退休签、O-A、LTR 退休类都打开</span></button>
+      </div>
+    </div>
+
+    <div class="qstep" data-q="1">
+      <div class="qtitle">2 / 5　你去泰国主要是为了什么</div>
+      <div class="qhint">这一题决定大方向，选最接近的那一个。</div>
+      <div class="opts">
+        <button class="opt" data-k="goal" data-v="travel">旅游 / 探亲 / 短期体验</button>
+        <button class="opt" data-k="goal" data-v="remote">境外远程工作（收入不在泰国）</button>
+        <button class="opt" data-k="goal" data-v="retire">退休养老 / 长期定居</button>
+        <button class="opt" data-k="goal" data-v="employ">给泰国公司打工 / 在泰创业取酬</button>
+        <button class="opt" data-k="goal" data-v="study">读书 / 学语言 / 学泰拳</button>
+        <button class="opt" data-k="goal" data-v="family">依亲（配偶或子女是泰国人）</button>
+      </div>
+    </div>
+
+    <div class="qstep" data-q="2">
+      <div class="qtitle">3 / 5　你打算一次待多久</div>
+      <div class="qhint">注意免签的限制是"单次 30 天、每 180 天累计 90 天"。</div>
+      <div class="opts">
+        <button class="opt" data-k="dur" data-v="d30">30 天以内</button>
+        <button class="opt" data-k="dur" data-v="d90">1–3 个月</button>
+        <button class="opt" data-k="dur" data-v="d180">3 个月–1 年</button>
+        <button class="opt" data-k="dur" data-v="dyear">1 年以上，想常驻</button>
+      </div>
+    </div>
+
+    <div class="qstep" data-q="3">
+      <div class="qtitle">4 / 5　你的资金实力更接近哪一档</div>
+      <div class="qhint">按"可以长期不动用的资产"来估，不是年收入。</div>
+      <div class="opts">
+        <button class="opt" data-k="money" data-v="low">10 万元人民币以内<span class="ol2">≈ 50 万铢以下</span></button>
+        <button class="opt" data-k="money" data-v="mid">10 万–100 万元<span class="ol2">≈ 50 万–500 万铢</span></button>
+        <button class="opt" data-k="money" data-v="high">100 万元以上<span class="ol2">≈ 500 万铢以上</span></button>
+      </div>
+    </div>
+
+    <div class="qstep" data-q="4">
+      <div class="qtitle">5 / 5　你有多不想折腾材料</div>
+      <div class="qhint">这是"花钱换省事"和"自己搞省下钱"的取舍。</div>
+      <div class="opts">
+        <button class="opt" data-k="effort" data-v="hate">很不想折腾，能花钱买确定性最好</button>
+        <button class="opt" data-k="effort" data-v="ok">愿意准备材料，但流程要清楚</button>
+        <button class="opt" data-k="effort" data-v="fine">完全没问题，我自己能搞定</button>
+      </div>
+    </div>
+
+    <div class="qnav">
+      <button class="btn ghost sm" id="qback" disabled>← 上一题</button>
+      <button class="btn primary sm" id="qnext" disabled>下一题</button>
+      <button class="btn ghost sm" id="qreset" style="margin-left:auto">重做</button>
+    </div>
+
+    <div id="qresult"></div>
+  </div>
+</section>
+
+<!-- ========== 04 办理流程 ========== -->
+<section class="panel" id="p4">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 04</div>
+    <h2>怎么办理：e-Visa 全流程</h2>
+    <p class="sec-desc">自 2025 年 1 月 1 日起，泰国签证统一走官方电子签系统，不用再跑领馆递护照。</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>项目</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="first">官方唯一入口</td><td><code style="font-family:ui-monospace,monospace;background:var(--bg3);padding:2px 7px;border-radius:4px">thaievisa.go.th</code> —— 没有第二个官网</td></tr>
+        <tr><td class="first">是否需要交护照</td><td><b>不需要</b>。全程线上上传，批准后邮箱收 PDF，护照留在自己手上</td></tr>
+        <tr><td class="first">能否在泰境内申请</td><td><b>不能</b>。必须人在泰国境外时提交</td></tr>
+        <tr><td class="first">标准审理时长</td><td>约 14 个工作日；旺季（11月–次年2月）可能延到 21 天。TR 旅游签常 3–7 天出</td></tr>
+        <tr><td class="first">建议递签时间</td><td>出发前 <b>4–6 周</b>。不要先买不可退机票</td></tr>
+        <tr><td class="first">文件规格</td><td>PDF 或 JPG，单文件一般 &lt; 3MB，300 DPI 清晰可读</td></tr>
+        <tr><td class="first">付款</td><td>Visa / Mastercard / JCB / AMEX 在线支付，<b>递交后不退费</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>八步走完</h3>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-when">STEP 1</div>
+      <h4>注册并验证邮箱</h4>
+      <p>在 thaievisa.go.th 建账号，收验证邮件激活。选对<b>领区/使领馆</b>——按你的户籍或常住地，跨区递交会被退件。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 2</div>
+      <h4>选签证类型和入境次数</h4>
+      <p>旅游签分单次/多次，非移民签同理。选错类型是最常见的退件原因之一。<b>先确定自己属于哪一类身份，再点选。</b></p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 3</div>
+      <h4>准备并预扫描所有材料</h4>
+      <p>系统会超时。开始填表前，把所有文件扫描/拍照存好。常见清单：护照资料页、白底 4×6cm 彩照（露耳露眉、不戴眼镜首饰）、往返机票、住宿证明、银行流水（3–6 个月）。DTV 还要加 50 万铢资产证明 + 远程工作证明。退休签还要加无犯罪记录、体检证明、保险单。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 4</div>
+      <h4>在线填写申请表（英文）</h4>
+      <p>姓名、生日、护照号必须与护照完全一致，且和银行流水上的名字对得上。DTV 最常见的拒签原因就是<b>合同姓名 / 银行账户 / 护照三者不一致</b>。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 5</div>
+      <h4>上传全部文件</h4>
+      <p>清晰、正对、四角完整。模糊或裁切过的扫描件会被打回重传，白白多等一周。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 6</div>
+      <h4>支付规费</h4>
+      <p>签证费不退。付完记得保存支付凭证和申请编号。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 7</div>
+      <h4>等审批邮件</h4>
+      <p>登录系统可查进度。审批邮件有时会进垃圾箱，<b>记得翻一下</b>。补件通知也在邮件里。</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-when">STEP 8</div>
+      <h4>收电子签函，出发</h4>
+      <p>收到带二维码的 PDF。存手机 + 打印一份。值机时航空公司通常会查看。入境时移民官按护照号在系统里核验。</p>
+    </div>
+  </div>
+
+  <h3>四个最容易翻车的点</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h4 style="margin-top:0">❌ 找中介"代填"被加价</h4>
+      <p>市面上有大量名称相似的仿冒站点，对同一张表收 50 美元以上的"服务费"，甚至有直接诈骗的。<b>只认 thaievisa.go.th。</b></p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">❌ 照片不合格</h4>
+      <p>背景不是纯白、露齿、戴眼镜、露耳眉不合规、尺寸不对——都会被退。花几十块去正规照相馆说是"泰国签证照"，比自己 P 划算。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">❌ 资金证明的时间线对不上</h4>
+      <p>DTV 的 50 万铢通常要求申请前已持有约 3 个月；O-A 的 80 万铢首次需存满 2 个月。临时转账进去，会被质疑资金来源。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">❌ 保单不满足签证口径</h4>
+      <p>O-A 的保险必须满足官方最低额度，且外国保单要使用规定的 <b>Foreign Insurance Certificate</b> 表格并由保险公司签章，保单须明确覆盖泰国、写明每保单年度总保额与起止日期。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 05 落地手续 ========== -->
+<section class="panel" id="p5">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 05</div>
+    <h2>落地之后：必须办的那些事</h2>
+    <p class="sec-desc">泰国移民系统这几年最大的变化，是把 TDAC、TM30、90 天报到这三条记录<b>串成了同一条链</b>——缺一环，后面每一步都卡住。</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>事项</th><th>谁办</th><th>时限</th><th>作用 / 后果</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="first">TDAC<br><small>电子入境卡</small></td>
+          <td>你本人</td>
+          <td class="num">每次入境前<br>72 小时内</td>
+          <td>取代原纸质 TM6。<b>所有外国人每次入境都要填</b>，包括长期签证持有者。官网免费，一次最多可提交 10 人</td>
+        </tr>
+        <tr>
+          <td class="first">TM30<br><small>住址申报</small></td>
+          <td>房东 / 酒店<br><small>你负责确认</small></td>
+          <td class="num">入住 24 小时内</td>
+          <td>法定由房主申报。<b>每次从境外返回都要重报</b>。办延期、开银行、办驾照都要看这张回执</td>
+        </tr>
+        <tr>
+          <td class="first">TM47<br><small>90 天报到</small></td>
+          <td>你本人</td>
+          <td class="num">每 90 天<br><small>可提前15天～逾期7天内</small></td>
+          <td>连续在泰满 90 天须报到。<b>出境一次，计时归零</b>。逾期罚 2,000 铢；网上报不上只能本人去移民局</td>
+        </tr>
+        <tr>
+          <td class="first">TM8<br><small>回头签</small></td>
+          <td>你本人</td>
+          <td class="num">离境前</td>
+          <td>持 1 年期许可离境<b>未办回头签 = 许可作废</b>。单次 1,000 铢 / 多次 3,800 铢</td>
+        </tr>
+        <tr>
+          <td class="first">TM7<br><small>延期</small></td>
+          <td>你本人</td>
+          <td class="num">到期前 30 天内</td>
+          <td>1,900 铢。银行流水、TM30 回执、照片缺一不可</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>关键理解：这三件事不是"三个独立任务"，而是同一份档案。</b>没有 TM30 记录，居留证明开不出来；没有居留证明，银行开不了户、驾照办不了、延期也可能被卡。所以落地第一件事不是找房子，是<b>确认房东会替你报 TM30</b>——签长约前一定要问清楚。
+  </div>
+
+  <h3>银行开户</h3>
+  <div class="card">
+    <p>2026 年的现实：<b>开户比几年前难得多</b>。反洗钱与 KYC 审查收紧，同一家银行不同支行都可能给不同答案。</p>
+    <div class="tw" style="margin:14px 0">
+      <table style="min-width:560px">
+        <thead><tr><th>签证类型</th><th>开户可行性</th></tr></thead>
+        <tbody>
+          <tr><td class="first">Non-B / Non-O（工作、退休、依亲）</td><td class="ok">通常可行</td></tr>
+          <tr><td class="first">LTR / 精英签 / 永久居留</td><td class="ok">通常可行</td></tr>
+          <tr><td class="first">Non-ED（学生签）</td><td class="mid">部分银行可，看支行</td></tr>
+          <tr><td class="first">DTV（数字游民签）</td><td class="no">多数银行明确拒绝</td></tr>
+          <tr><td class="first">旅游签 / 免签入境</td><td class="no">基本被拒</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>材料清单（按顺序准备，顺序不能颠倒）</h4>
+    <ol>
+      <li><b>先有合法长期签证</b>——护照里的签证章是前提</li>
+      <li><b>再报 TM30</b>——房东/酒店在移民局登记你的住址</li>
+      <li><b>再去移民局开居留证明</b>（Residence Certificate，约 500 铢，1–2 个工作日）</li>
+      <li><b>再买泰国手机卡并实名登记</b>——开户和 PromptPay 都绑定本人 SIM</li>
+      <li>带齐：护照原件 + 居留证明 + TM30 回执 + 第二证件（驾照/身份证）+ 初始存款 500–2,000 铢</li>
+    </ol>
+    <p><b>优先试点：</b>开泰银行（Bangkok Bank）和开泰银行（Kasikorn / KBank）对外国人最成熟。KBank 官网公开了外国人开户材料清单；Bangkok Bank 则让你直接去支行问。<b>一家被拒不代表全行被拒，换一家支行再试</b>——优先选外籍人士密集区域的支行。</p>
+    <div class="warn"><b>警惕 FCD 陷阱：</b>如果你不符合开普通泰铢账户的条件，银行可能推荐"外币存款账户（FCD）"。那只是<b>存外币的地方</b>，不是可日常消费的泰铢账户，也没有 PromptPay。别以为它解决了你的银行需求。</div>
+  </div>
+
+  <h3>泰国驾照</h3>
+  <div class="card">
+    <p>驾照的价值不只在开车：它是<b>泰国官方认可的身份证件</b>，去银行、住酒店都能用；更重要的是——<b>没有泰国驾照，出事故时车辆保险可能被视为无效</b>。</p>
+    <div class="grid g2" style="margin-top:14px">
+      <div>
+        <h4 style="margin-top:0">两条路径</h4>
+        <ul>
+          <li><b>转换路径（推荐）</b>：持有有效本国驾照 → 免路考，多数可直接拿 5 年期</li>
+          <li><b>全新申请</b>：无外国驾照可转换 → 需笔试 + 场地路考，先拿 2 年临时驾照</li>
+        </ul>
+        <h4>必备材料</h4>
+        <ul>
+          <li>护照 + 有效非移民签证（<b>旅游签/免签通常不合格</b>）</li>
+          <li>移民局居留证明，<b>开具日期 30 天内</b>，地址须与 TM30 一致</li>
+          <li>泰国诊所体检证明，<b>30 天内</b>，100–300 铢</li>
+          <li>护照照片 2–3 张</li>
+          <li>转换路径另需：外国驾照原件 + 认证泰语翻译件（1,500–3,500 铢）</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-top:0">2026 年新增的两道关</h4>
+        <ul>
+          <li><b>DLT 在线学习模块</b>：新规要求预约前或当日完成，约 4 小时视频 + 章节测验，完成证书需在 DLT 出示</li>
+          <li><b>DLT Smart Queue 预约</b>：2026 年绝大多数分所不再接受 walk-in。曼谷及清迈/普吉/芭提雅的名额常在开放后 24 小时内订满</li>
+        </ul>
+        <h4>考试</h4>
+        <ul>
+          <li>体能测试：色觉、反应、深度、周边视野</li>
+          <li>笔试：50 题选择，<b>答对 45 题（90%）</b>通过，有中文/英文版</li>
+        </ul>
+        <h4>费用</h4>
+        <ul>
+          <li>2 年临时驾照 205 铢 / 5 年驾照 505 铢</li>
+          <li>居留证明 500 铢 + 翻译 1,500–3,500 铢</li>
+          <li><b>自行办理总花费约 2,000–4,500 铢</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="warn"><b>最常见的被拒原因不是路考，是居留证明。</b>过期、地址与 TM30 不一致、或根本开不出来（因为签证类型不符），这三点挡住了绝大多数申请人。</div>
+  </div>
+
+  <h3>其他落地配套</h3>
+  <div class="grid g3">
+    <div class="card">
+      <h4 style="margin-top:0">📱 手机卡</h4>
+      <p>三大运营商 AIS / TrueMove / dtac，机场和便利店可买。<b>必须用护照实名登记</b>——PromptPay 和手机银行都靠它收验证码。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">🏠 租房</h4>
+      <p>长租一般押二付一。签合同前务必确认两点：<b>房东是否配合报 TM30</b>；水电是民用电价还是商业电价（公寓加价很常见）。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">🏥 医保注册</h4>
+      <p>外国人不能加入泰国的全民医保（30铢计划）。受雇于泰企可参加社保（SSS，工资约 5%）。<b>其余人必须自购商业保险</b>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 06 城市对比 ========== -->
+<section class="panel" id="p6">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 06</div>
+    <h2>四个城市怎么选</h2>
+    <p class="sec-desc">同样 4 万铢一个月，在清迈能过得体面，在普吉只是中等，在曼谷勉强舒适。差别主要来自房租、医疗和交通。</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>维度</th><th>曼谷</th><th>清迈 / 清莱</th><th>普吉 · 甲米 · 苏梅</th><th>芭提雅 · 华欣 · 罗勇</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="first">单人月开销<br><small>中等生活水平</small></td><td class="num"><b>30,000–65,000 铢</b></td><td class="num"><b>20,000–42,000 铢</b></td><td class="num"><b>28,000–60,000 铢</b></td><td class="num"><b>24,000–55,000 铢</b></td></tr>
+        <tr><td class="first">月租参考<br><small>普通公寓 / 好地段公寓</small></td><td class="num">10,000 / 18,000–45,000</td><td class="num">8,000 / 12,000–20,000</td><td class="num">15,000 / 25,000–50,000</td><td class="num">10,000 / 15,000–35,000</td></tr>
+        <tr><td class="first">医疗</td><td><span class="ok">★★★★★</span><br>全泰最强，JCI 医院密集</td><td><span class="mid">★★★★</span><br>够用，重症需转曼谷</td><td><span class="mid">★★★★</span><br>国际医院有，价格偏高</td><td><span class="mid">★★★★</span><br>Bangkok Hospital 分院</td></tr>
+        <tr><td class="first">公共交通</td><td><span class="ok">最好</span><br>BTS / MRT 覆盖广</td><td><span class="no">弱</span><br>主要靠摩托 / 双条车</td><td><span class="no">弱</span><br>基本必须自己有车</td><td><span class="no">弱</span><br>双条车 / 摩托</td></tr>
+        <tr><td class="first">外籍社群</td><td>极多，各国都有</td><td>数字游民 + 退休者多</td><td>退休 + 度假客多</td><td>欧美退休者为主</td></tr>
+        <tr><td class="first">最大缺点</td><td>堵车、空气质量、生活成本最高</td><td><span class="no">2–4月烧芭季 PM2.5 严重</span></td><td>贵、旅游区噪音、雨季海况差</td><td>不如曼谷国际化，旅游区嘈杂</td></tr>
+        <tr><td class="first">最适合</td><td>要医疗、要选择、要工作的便利性</td><td>要性价比、要慢节奏、不介意空气质量</td><td>要海岛生活、不介意成本</td><td>要安静养老、离曼谷近</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4 style="margin-top:0">💡 关键提醒一：清迈的"烟雾季"是真实成本</h4>
+      <p>每年 2–4 月（最严重常在 3–4 月），泰北农业烧荒叠加地形因素，清迈一度成为全球 PM2.5 最高的城市之一。如果你有呼吸道问题、或计划长期定居，<b>这几个月需要有明确的应对方案</b>——空气净化器是刚需，不少人干脆在这几个月南下。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">💡 关键提醒二：没有车等于没有自由</h4>
+      <p>曼谷之外，公共交通远不足以支撑日常生活。摩托车月租约 2,500–5,000 铢，汽车 15,000–25,000 铢。<b>但这意味着你几乎必然要办泰国驾照</b>——而没有非移民签证就办不了驾照。这三个环节是锁死的。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">🔌 2026 年电费新规（影响每个月账单）</h4>
+    <p>泰国自 2026 年 9 月起调整居民阶梯电价：</p>
+    <ul>
+      <li>前 200 度：<b>不超过 3.00 铢/度</b></li>
+      <li>201–400 度：<b>4.16 铢/度</b></li>
+      <li>400 度以上：<b>4.36 铢/度</b></li>
+      <li>另加 Ft 附加费 约 0.16 铢/度，再加 7% VAT</li>
+    </ul>
+    <p>小户型、适度开空调的受益最大；<b>全天开空调的房子会迅速落到最高档</b>。看房时，电费单价和空调数量要一起看。</p>
+  </div>
+</section>
+
+<!-- ========== 07 生活成本 ========== -->
+<section class="panel" id="p7">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 07</div>
+    <h2>生活成本与预算计算器</h2>
+    <p class="sec-desc">先看三档标准，再用下面的计算器算你自己的数。汇率按 1 元 ≈ 5.0 铢。</p>
+  </div>
+
+  <div class="grid g3" style="margin-bottom:28px">
+    <div class="card">
+      <div class="tag t-em" style="margin-bottom:8px">节约型</div>
+      <div style="font-size:26px;font-weight:800;color:var(--emerald);line-height:1.2">16,000–28,000 <small style="font-size:14px;color:var(--ink3)">铢/月</small></div>
+      <div style="font-size:13.5px;color:var(--ink3);margin:4px 0 12px">≈ 3,200–5,600 元/月</div>
+      <p style="font-size:13.5px;margin:0">本地公寓 studio、以街边餐和本地餐馆为主、骑摩托代步、本地基础医疗保险。清迈、二线城市更容易做到。</p>
+    </div>
+    <div class="card" style="border-color:var(--gold-2);box-shadow:var(--shadow-lg)">
+      <div class="tag t-gold" style="margin-bottom:8px">舒适型 · 大多数人的落点</div>
+      <div style="font-size:26px;font-weight:800;color:var(--gold);line-height:1.2">35,000–60,000 <small style="font-size:14px;color:var(--ink3)">铢/月</small></div>
+      <div style="font-size:13.5px;color:var(--ink3);margin:4px 0 12px">≈ 7,000–12,000 元/月</div>
+      <p style="font-size:13.5px;margin:0">好地段一居、常外食也自己做、有健身房和咖啡习惯、国际中档医疗保险、偶尔周末出行。</p>
+    </div>
+    <div class="card">
+      <div class="tag t-ind" style="margin-bottom:8px">高端型</div>
+      <div style="font-size:26px;font-weight:800;color:var(--indigo);line-height:1.2">80,000–150,000+ <small style="font-size:14px;color:var(--ink3)">铢/月</small></div>
+      <div style="font-size:13.5px;color:var(--ink3);margin:4px 0 12px">≈ 16,000–30,000+ 元/月</div>
+      <p style="font-size:13.5px;margin:0">市中心两居或别墅、常去西餐厅、有车、国际高端医疗保险（含门诊和全球转运）、频繁旅行。</p>
+    </div>
+  </div>
+
+  <div class="calc">
+    <h3 style="margin-top:0">算算你自己的月度开销</h3>
+    <div class="calc-grid">
+      <div>
+        <div class="field">
+          <label>① 你想住哪个城市</label>
+          <div class="seg" id="c-city">
+            <button data-v="bkk" class="on">曼谷</button>
+            <button data-v="cnx">清迈</button>
+            <button data-v="hkt">普吉</button>
+            <button data-v="pty">芭提雅/华欣</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>② 生活档位</label>
+          <div class="seg" id="c-tier">
+            <button data-v="low">节约型</button>
+            <button data-v="mid" class="on">舒适型</button>
+            <button data-v="high">高端型</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="field">
+          <label>③ 住房类型</label>
+          <div class="seg" id="c-house">
+            <button data-v="studio">单间 studio</button>
+            <button data-v="1br" class="on">一居室</button>
+            <button data-v="2br">两居室</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>④ 代步方式</label>
+          <div class="seg" id="c-tran">
+            <button data-v="moto">摩托</button>
+            <button data-v="none" class="on">公共交通/网约车</button>
+            <button data-v="car">自己开车</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>⑤ 医疗保险档位</label>
+          <div class="seg" id="c-ins">
+            <button data-v="local">泰国本地基础</button>
+            <button data-v="mid" class="on">中档（含部分门诊）</button>
+            <button data-v="intl">国际高端</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-out" style="margin-top:8px">
+      <div class="live">你的预算测算</div>
+      <div class="calc-total">
+        <span class="big" id="c-total">0</span>
+        <span class="unit">铢 / 月</span>
+      </div>
+      <div class="calc-cny" id="c-cny">≈ 0 元 / 月</div>
+      <div class="bars" id="c-bars"></div>
+      <div class="leg" id="c-leg"></div>
+      <div style="margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px;color:var(--ink2)">
+        年度总开销：<b id="c-year" style="font-size:17px;color:var(--ink)">—</b>　
+        <span style="font-size:12.5px;color:var(--ink3)">（不含签证费、机票、保险年费与回国探亲）</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>容易被低估的五项开销</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h4 style="margin-top:0">① 合规成本（每年 10,000–50,000 铢）</h4>
+      <p>签证费、延期费、回头签、TM30/TM47、翻译公证、居留证明、保险……单笔都不大，加起来很可观。绝大多数网上"月开销 2 万铢"的估算<b>都不含这一块</b>。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">② 保险年费摊到每月</h4>
+      <p>中档保险 40,000–80,000 铢/年，摊到每月就是 3,300–6,700 铢。这笔钱在"月度预算"里经常被漏掉，但它决定了你遇到大病的底线。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">③ 空调电费</h4>
+      <p>雨季湿热、热季酷热，全年基本都要开空调。小公寓适度使用约 2,000–3,500 铢/月，大房子全天开可能到 5,000–8,000 铢。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">④ 回国探亲和签证跑签</h4>
+      <p>持 DTV 每 360 天必须出境；持退休签每年可能回国。<b>机票 + 离境期间的住宿</b>是属于"旅居"这个身份本身的固定支出。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">⑤ 汇率</h4>
+      <p>你的收入在人民币、支出在泰铢。近一年泰铢对人民币是走强的（≈ -9%），意味着<b>同样的月租，用人民币付要更贵</b>。估算预算时给汇率留 5–10% 的缓冲。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">⑥ 初期一次性投入</h4>
+      <p>长租押二付一（3 个月租金）、家具家电、摩托车/汽车购置、押金——<b>落地头两个月的支出通常是月均的 3–5 倍</b>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 08 医疗 ========== -->
+<section class="panel" id="p8">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 08</div>
+    <h2>医疗与保险</h2>
+    <p class="sec-desc">外国人不能加入泰国的全民医保。这一章是旅居泰国最不能省的一块。</p>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:24px">
+    <div class="card">
+      <h4 style="margin-top:0">公立医院 vs 私立医院</h4>
+      <ul>
+        <li><b>公立医院</b>：极便宜、医疗水平不差，但排队久、英语支持有限、环境拥挤，通常用不上</li>
+        <li><b>私立医院</b>：外国人实际上都在用。等待短、有国际患者部、医生英语流利、设备新。<b>贵，但比欧美同类便宜 60–80%</b></li>
+      </ul>
+      <p style="font-size:13.5px;margin-top:12px">主流国际医院：Bumrungrad（曼谷旗舰）、Bangkok Hospital 全网络（曼谷/芭提雅/普吉/清迈/苏梅）、Samitivej、BNH、MedPark，以及清迈的 Ram、Maharaj。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">常见费用参考（私立自费）</h4>
+      <div class="tw" style="margin:0">
+        <table style="min-width:0">
+          <tbody>
+            <tr><td>全科门诊</td><td class="num"><b>800–2,000 铢</b></td></tr>
+            <tr><td>专科门诊</td><td class="num"><b>1,500–4,000 铢</b></td></tr>
+            <tr><td>基础血液检查</td><td class="num"><b>1,000–3,000 铢</b></td></tr>
+            <tr><td>MRI</td><td class="num"><b>5,000–15,000 铢</b></td></tr>
+            <tr><td>私立病房一晚</td><td class="num"><b>4,000–12,000 铢</b></td></tr>
+            <tr><td>ICU 一天</td><td class="num"><b>约 1,500–3,000 美元</b></td></tr>
+            <tr><td>阑尾炎手术</td><td class="num"><b>50,000–120,000 铢</b></td></tr>
+            <tr><td>冠脉搭桥</td><td class="num"><b>30 万–60 万铢</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12.5px;color:var(--ink3);margin-top:10px">2026 年估算，Bumrungrad / Bangkok Hospital 偏上限，其他私立医院常便宜 20–40%。</p>
+    </div>
+  </div>
+
+  <div class="warn" style="margin-bottom:24px">
+    <b>为什么必须买保险：</b>一次摩托车事故的住院费可能轻松突破 30 万铢（约 6 万元）。而 ICU 一天就是 5–10 万铢。<b>没有保险，一次意外就能吃掉几年的生活费结余。</b>
+  </div>
+
+  <h3>保险怎么选</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>类型</th><th>年费参考</th><th>特点</th><th>适合</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="first">泰国本地基础险</td>
+          <td class="num">20,000–40,000 铢</td>
+          <td>多为仅住院（IPD），可能有免赔额，常排除既往症，条款多为泰文</td>
+          <td>预算紧、年轻健康</td>
+        </tr>
+        <tr>
+          <td class="first">泰国本地中档险</td>
+          <td class="num">40,000–80,000 铢</td>
+          <td>含部分门诊（OPD），年额度更高，移民局认可度高</td>
+          <td>长期定居，需满足签证保险要求</td>
+        </tr>
+        <tr>
+          <td class="first">国际医疗保险 IPMI</td>
+          <td class="num">100,000–200,000+ 铢</td>
+          <td>额度高、可全球就医、可携带到其他国家、通常可直付（direct billing）</td>
+          <td>会跨国流动、要覆盖全球</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>签证对保险的硬性要求</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>签证</th><th>保险要求</th><th>备注</th></tr></thead>
+      <tbody>
+        <tr><td class="first">Non-O-A 退休</td><td class="num"><b>≥100,000 美元 或 300 万铢 / 保单年</b></td><td>外国保单须用规定的 Foreign Insurance Certificate 表格，由保险公司签章</td></tr>
+        <tr><td class="first">Non-O-X</td><td class="num">40 万铢住院 + 4 万铢门诊</td><td>中国护照不适用该签证</td></tr>
+        <tr><td class="first">LTR</td><td class="num"><b>≥50,000 美元</b></td><td>或 100,000 美元存款（存满 12 个月）替代</td></tr>
+        <tr><td class="first">DTV</td><td class="num"><b>≥50,000 美元</b></td><td>递交时需提供保单</td></tr>
+        <tr><td class="first">Non-B 工作</td><td class="num">视雇主与移民局</td><td>受雇者通常参加社保（SSS）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>年龄是保险的分水岭。</b>泰国多数保险公司对新投保设有年龄上限（常见 75 或 80 岁），且随年龄保费显著上升。如果你打算长期在泰养老，<b>越早投保越容易通过核保、保费越低</b>——等到 65 岁再买，可能面临拒保或高额加费。
+  </div>
+</section>
+
+<!-- ========== 09 税务资金 ========== -->
+<section class="panel" id="p9">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 09</div>
+    <h2>钱怎么进出：税务与资金</h2>
+    <p class="sec-desc">这是整本手册里<b>最容易踩雷、也最容易省下大钱</b>的一章。泰国 2024 年起的税务规则变化，直接影响每一个长住的人。</p>
+  </div>
+
+  <h3>一、你什么时候成为泰国税务居民</h3>
+  <div class="card">
+    <p>在一个自然年内，<b>累计在泰国停留 180 天及以上</b>，即为当年泰国税务居民。<b>按累计计算，不要求连续</b>——12 次每次 16 天，和一次住半年，效果一样。入境和离境当天都算一天。签证类型不影响这个判定。</p>
+    <p>不到 180 天 → 非税务居民，泰国只对<b>泰国境内来源</b>的收入征税。</p>
+  </div>
+
+  <h3>二、境外收入汇入泰国——规则变了</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>时间</th><th>规则</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="first">2024 年 1 月 1 日之前</td>
+          <td>存在一个著名漏洞：只要<b>不在收入的同一年汇入</b>，就免税。很多人靠"今年赚、明年汇"完全避税。</td>
+        </tr>
+        <tr>
+          <td class="first" style="color:var(--coral)">2024 年 1 月 1 日起（现行）</td>
+          <td>漏洞关闭（税务厅 Por.161/2566 号令）：只要你是税务居民，<b>境外收入汇入泰国时即需纳税，不论它是哪一年赚的</b>。</td>
+        </tr>
+        <tr>
+          <td class="first" style="color:var(--emerald)">保护性条款</td>
+          <td>Por.162/2566 号令：<b>2024 年 1 月 1 日之前赚到的钱，任何时候汇入都免税</b>。</td>
+        </tr>
+        <tr>
+          <td class="first" style="color:var(--gold)">草案状态</td>
+          <td>2025 年起讨论的"当年或次年汇入免税"松绑措施，<b>截至 2026 年 9 月仍未刊登政府公报，尚未生效</b>。不要按它做规划。</td>
+        </tr>
+        <tr>
+          <td class="first" style="color:var(--emerald)">LTR 豁免</td>
+          <td>符合类别的 LTR 持有者，境外收入汇入泰国<b>依法令免税</b>；高技能类别本地收入按 17% 固定税率。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn">
+    <b>最重要的一条实操建议：把 2024 年前的钱和 2024 年后的收入分开存放。</b>保护条款只保护"你能证明是 2024 年前赚的钱"。如果两笔钱混在一个账户里，你就得让税务官凭你的说法接受——而银行记录是唯一的证据。<b>现在下载一份 2023 年 12 月 31 日的对账单，成本为零，价值极高。</b>
+  </div>
+
+  <h3>三、申报义务</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h4 style="margin-top:0">什么时候要报</h4>
+      <ul>
+        <li>个人年收入超过 <b>120,000 铢</b>，或夫妻超过 <b>220,000 铢</b>，<b>即使不用交税也必须申报</b></li>
+        <li>申报期：次年 <b>1 月 1 日 – 3 月 31 日</b>（电子申报可延至 4 月 8 日）</li>
+        <li>需要先办 <b>税号（TIN）</b>，到当地税务局办理</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-top:0">税率与抵免</h4>
+      <ul>
+        <li>个人所得税为<b>累进税率 5%–35%</b></li>
+        <li>中国与泰国有避免双重征税协定（DTA），在境外已缴的税<b>通常可抵免</b>，但须在申报时提交境外完税证明</li>
+        <li>部分协定把政府养老金保留给支付国征税——具体看你的收入类型</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>四、钱怎么汇进来</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>渠道</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td class="first">银行电汇</td><td>最正式，留痕清晰（对税务证明友好）。需注意中转行费用，通常 200–500 元人民币/笔</td></tr>
+        <tr><td class="first">境外提现</td><td>用境外卡在泰国 ATM 取现，<b>手续费高</b>（泰国端通常收 220 铢/笔，加上发卡行端费用），实际成本可达取款额的 5% 以上</td></tr>
+        <tr><td class="first">境内卡境外消费</td><td>用中国信用卡在泰国刷卡消费，多数顾问认为也构成"汇入"的一种形式，但目前官方问答未明确覆盖。<b>建议按"算"来规划</b></td></tr>
+        <tr><td class="first">PromptPay / QR</td><td>需泰国银行账户才能用。日常消费极方便</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><b>携带外币现金：</b>入境或出境携带等值 <b>15,000 美元以上</b> 外币须向海关申报</li>
+    <li><b>买房资金：</b>外国人买公寓需从境外汇入泰铢，并取得银行的 <b>FET 表（外汇交易凭证）</b>——这是未来把卖房款汇出境外的必要凭据</li>
+  </ul>
+
+  <h3>五、购房、开公司的边界</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>事项</th><th>规则</th></tr></thead>
+      <tbody>
+        <tr><td class="first">买公寓</td><td><span class="ok">可以</span>。外国人可持有公寓<b>永久产权</b>，但每栋楼外国人产权比例合计不得超过 <b>49%</b></td></tr>
+        <tr><td class="first">买地 / 买别墅</td><td><span class="no">不可以</span>。外国人不能直接持有土地，通常只能用泰国公司、长期租赁（最长 30 年）等方式</td></tr>
+        <tr><td class="first">注册公司</td><td>泰籍股东须持股 <b>≥51%</b>（BOI 促进企业、美泰友好条约企业等例外）。用公司持地属灰色地带，风险自负</td></tr>
+        <tr><td class="first">买房与签证</td><td><b>买房不送签证。</b>泰国没有购房移民政策，房产与居留身份完全脱钩</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========== 10 应急短语 ========== -->
+<section class="panel" id="p10">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 10</div>
+    <h2>应急联系与实用短语</h2>
+    <p class="sec-desc">截图存手机。这几个号码和句子，在关键时刻比任何攻略都有用。</p>
+  </div>
+
+  <h3>紧急号码</h3>
+  <div class="grid g2" style="margin-bottom:26px">
+    <div class="em"><div class="no2">191</div><div class="lb">报警<span>Police · 全国通用</span></div></div>
+    <div class="em"><div class="no2">1155</div><div class="lb">旅游警察<span>Tourist Police · <b>提供中文服务</b></span></div></div>
+    <div class="em"><div class="no2">1669</div><div class="lb">急救 / 救护车<span>Medical Emergency</span></div></div>
+    <div class="em"><div class="no2">199</div><div class="lb">火警<span>Fire</span></div></div>
+    <div class="em"><div class="no2">1178</div><div class="lb">移民局热线<span>Immigration Bureau</span></div></div>
+    <div class="em"><div class="no2">1166</div><div class="lb">消费者保护<span>Consumer Protection</span></div></div>
+  </div>
+
+  <h3>中国领事保护</h3>
+  <div class="grid g2" style="margin-bottom:26px">
+    <div class="em"><div class="no2">+86-10-12308</div><div class="lb">外交部全球领保应急热线<span>24 小时 · 备用 +86-10-65612308</span></div></div>
+    <div class="em"><div class="no2">+66-2-245-7010</div><div class="lb">中国驻泰国大使馆<span>曼谷 · 领事保护与协助</span></div></div>
+    <div class="em"><div class="no2">+66-53-280-618</div><div class="lb">驻清迈总领馆<span>泰北地区</span></div></div>
+    <div class="em"><div class="no2">+66-81-766-5560</div><div class="lb">驻宋卡总领馆<span>泰南地区</span></div></div>
+    <div class="em"><div class="no2">+66-94-595-6158</div><div class="lb">驻普吉领事办公室<span>普吉及周边</span></div></div>
+    <div class="em"><div class="no2">+66-80-936-6070</div><div class="lb">驻孔敬总领馆<span>泰东北地区</span></div></div>
+  </div>
+
+  <h3>救命短语：看病</h3>
+  <div class="ph" style="margin-bottom:26px">
+    <div class="ph-row"><div class="ph-cn">我不舒服</div><div class="ph-th">ฉันไม่สบาย<i>chǎn mâi sà-baai</i></div></div>
+    <div class="ph-row"><div class="ph-cn">医院在哪里？</div><div class="ph-th">โรงพยาบาลอยู่ที่ไหน<i>roong-pá-yaa-baan yùu tîi nǎi</i></div></div>
+    <div class="ph-row"><div class="ph-cn">帮帮我！</div><div class="ph-th">ช่วยด้วย<i>chûai dûai</i></div></div>
+    <div class="ph-row"><div class="ph-cn">我对……过敏</div><div class="ph-th">ฉันแพ้...<i>chǎn pháe ...</i></div></div>
+    <div class="ph-row"><div class="ph-cn">疼 / 这里疼</div><div class="ph-th">เจ็บ / เจ็บตรงนี้<i>jèp / jèp dtrong níi</i></div></div>
+    <div class="ph-row"><div class="ph-cn">有会说中文的翻译吗？</div><div class="ph-th">มีล่ามภาษาจีนไหม<i>mii lâam paa-sǎa jiin mǎi</i></div></div>
+    <div class="ph-row"><div class="ph-cn">我会付钱，请先治疗</div><div class="ph-th">ผม/ฉันจะจ่ายเงิน ช่วยรักษาก่อน<i>phǒm/chǎn jà jàai ngern, chûai rák-sǎa kɔ̀ɔn</i></div></div>
+    <div class="ph-row"><div class="ph-cn">我有保险</div><div class="ph-th">ฉันมีประกัน<i>chǎn mii bprà-gan</i></div></div>
+  </div>
+
+  <h3>救命短语：办证与日常</h3>
+  <div class="ph" style="margin-bottom:26px">
+    <div class="ph-row"><div class="ph-cn">你好 / 谢谢 / 对不起</div><div class="ph-th">สวัสดี / ขอบคุณ / ขอโทษ<i>sà-wàt-dii / khɔ̀ɔp-khun / khɔ̌ɔ-thôot</i></div></div>
+    <div class="ph-row"><div class="ph-cn">多少钱？</div><div class="ph-th">เท่าไหร่<i>thâo-rài</i></div></div>
+    <div class="ph-row"><div class="ph-cn">太贵了</div><div class="ph-th">แพงไป<i>phaeng pai</i></div></div>
+    <div class="ph-row"><div class="ph-cn">听不懂</div><div class="ph-th">ไม่เข้าใจ<i>mâi khâo-jai</i></div></div>
+    <div class="ph-row"><div class="ph-cn">请说慢一点</div><div class="ph-th">พูดช้าๆ หน่อย<i>phûut cháa-cháa nɔ̀i</i></div></div>
+    <div class="ph-row"><div class="ph-cn">我需要居留证明</div><div class="ph-th">ฉันต้องการใบรับรองถิ่นที่อยู่<i>chǎn dtɔ̂ng-gaan bai ráp-rɔɔng thìn-tîi-yùu</i></div></div>
+    <div class="ph-row"><div class="ph-cn">我要申报 TM30</div><div class="ph-th">ฉันต้องการแจ้ง TM30<i>chǎn dtɔ̂ng-gaan jâeng TM30</i></div></div>
+    <div class="ph-row"><div class="ph-cn">请给我这个，谢谢</div><div class="ph-th">ขออันนี้ครับ/ค่ะ<i>khɔ̌ɔ an níi khráp/khâ</i></div></div>
+  </div>
+  <div class="warn">
+    <b>语气词很关键：</b>男性句尾加 <b>ครับ（khráp）</b>，女性句尾加 <b>ค่ะ（khâ）</b>。<b>哪怕整句泰语都说不准，加上这两个词，对方的接受度会明显不同。</b>这是性价比最高的一句泰语。
+  </div>
+</section>
+
+<!-- ========== 11 清单 ========== -->
+<section class="panel" id="p11">
+  <div class="sec-head">
+    <div class="sec-kicker">Chapter 11</div>
+    <h2>时间线清单</h2>
+    <p class="sec-desc">勾选状态会保存在你的浏览器里。回来后接着勾。</p>
+  </div>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-when">出发前 60 天</div>
+      <h4>定方向、定签证</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>用第 03 章的问答器确定签证类型</b><span>先定签证，再定其他一切。签证决定租房、开户、驾照的可能性</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>确认护照有效期 ≥ 18 个月</b><span>退休签要求 18 个月，免签要求 6 个月。不足就先去换护照</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>如需退休签：开始准备 80 万铢资金并保持在账</b><span>首次申请需存满 2 个月，越晚开始越赶不及</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>如需退休签：办理无犯罪记录证明</b><span>通常有效期 3 个月，办太早会过期</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>如需 DTV：整理远程工作证明 + 50 万铢资产</b><span>合同、客户证明、收入流水，姓名必须与护照、银行账户完全一致</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">出发前 30 天</div>
+      <h4>递签、买保险</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>在 thaievisa.go.th 递交签证申请</b><span>只认这一个官网。按户籍/常住地选对领区</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>拍签证照</b><span>白底 4×6cm，露耳露眉，不戴眼镜首饰</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>购买符合签证要求的医疗保险</b><span>O-A 需 ≥300 万铢/10万美元；DTV 与 LTR 需 ≥5 万美元</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>下载并保存 2023-12-31 的银行对账单</b><span>零成本、极高价值：未来证明"2024 年前的钱"只有这份证据</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>把 2024 年前的资金与之后的收入分账户存放</b><span>避免混同后无法举证</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">出发前 7 天</div>
+      <h4>落地准备</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>办好签证并收到带二维码的电子签函</b><span>存手机 + 打印一份，值机时会查</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>预订前 1–2 周的临时住宿</b><span>先短租，落地看房后再签长约。别在没看过房的情况下签 12 个月</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>确认目标城市最近的国际医院</b><span>尤其是住清迈、普吉、芭提雅以外地区时</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">出发当天 · 登机前 72 小时内</div>
+      <h4>填 TDAC</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>在 tdac.immigration.go.th 提交电子入境卡</b><span>免费，官方唯一入口。第三方收费网站都是仿冒。一次最多可提交 10 人</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>保存 TDAC 确认二维码</b><span>截图存手机 + 云盘</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>备好入境可能被查的材料</b><span>返程机票、住宿订单、资金证明（免签约 1 万铢/人；旅游签或非移民签 2 万铢/人）</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">落地 24 小时内</div>
+      <h4>住址登记</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>确认房东或酒店已申报 TM30</b><span>法定由房主办，须在 24 小时内。你必须拿到回执或截图</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>买泰国手机卡并实名登记</b><span>用护照登记。手机银行和 PromptPay 都绑定它</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>拍下护照资料页、签证页、入境章</b><span>后面几乎每一项手续都要复印件</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">落地 7 天内</div>
+      <h4>确立居留基础</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>若计划长住：去移民局办居留证明</b><span>约 500 铢，1–2 个工作日。开户、办驾照都靠它，有效期 30 天</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>开泰国银行账户</b><span>需长期非移民签 + 居留证明 + TM30 + 泰国 SIM。被拒就换支行</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>把长期资金汇入泰国账户</b><span>退休签路线尤其要算准存期（首申需满 2 个月）</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>确认保险已生效并保留保单</b><span>需含英文条款、覆盖泰国、写明每保单年度保额</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">落地 30 天内</div>
+      <h4>生活与出行</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>签约长期住房</b><span>押二付一；书面确认房东配合报 TM30；确认水电是民用电价还是商业加价</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>办泰国驾照</b><span>先完成 DLT 在线学习模块 → Smart Queue 预约 → 体检证明 + 居留证明（都需 30 天内）</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>设置水电、网络、垃圾费的自动扣缴</b><span>绑定泰国银行账户</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>建立合规日历</b><span>把签证到期日、90 天报到日、保险到期日全部记进手机提醒</span></span></label>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-when">长期维护</div>
+      <h4>每年都要做的事</h4>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>每 90 天：报到（TM47）</b><span>可提前 15 天至逾期 7 天内办理。出境一次，计时归零</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>每次出入境：重新报 TM30 + 填 TDAC</b><span>回来要重报，别以为报一次就永久有效</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>每次离境前：办回头签（TM8）</b><span>单次 1,000 铢 / 多次 3,800 铢。忘了办 = 1 年许可作废</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>每年 1–3 月：如为税务居民需申报个税</b><span>停留 ≥180 天即为税务居民。年收入超 12 万铢即使不交税也要申报</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>续期前 3 个月：检查资金在账状态</b><span>退休签续期需资金存满 3 个月，且续期后 3 个月内不低于 40 万铢</span></span></label>
+      <label class="ck"><input type="checkbox"><span class="box"></span><span class="ck-txt"><b>每 6 个月：复核一次签证政策变化</b><span>泰国签证规则近年变动频繁，出发前和续期前各查一次官方渠道</span></span></label>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>关于这份手册</b></p>
+  <p>政策与价格核对日期：<b>2026 年 10 月 5 日</b>。汇率按 <b>1 元人民币 ≈ 5.0 泰铢</b> 折算（2026 年 10 月初水平）。</p>
+  <p><b>重要免责：</b>泰国签证、税务与移民规则变动频繁，2026 年 9 月 15 日的免签政策调整即为近例。本手册是个人使用的研究整理与决策辅助，<b>不构成法律、税务或移民建议</b>。任何一次实际申请或资金安排前，请以官方渠道为准：</p>
+  <p class="src">
+    <code>thaievisa.go.th</code> 电子签办理 ·
+    <code>tdac.immigration.go.th</code> 电子入境卡 ·
+    <code>tm47.immigration.go.th</code> 90 天报到 ·
+    <code>immigration.go.th</code> 移民局 ·
+    <code>rd.go.th</code> 泰国税务局 ·
+    <code>boi.go.th</code> LTR 签证
+  </p>
+  <p class="src">本页所有交互功能（签证问答器、成本计算器、清单勾选）均在本地浏览器运行，不上传任何数据。清单勾选状态保存在本机。</p>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+/* ---------------- Tabs ---------------- */
+(function(){
+  var bar = document.getElementById('tabbar');
+  var tabs = bar.querySelectorAll('.tab');
+  var panels = document.querySelectorAll('.panel');
+  function go(id, scroll){
+    tabs.forEach(function(t){ t.classList.toggle('on', t.dataset.p === id); });
+    panels.forEach(function(p){ p.classList.toggle('on', p.id === id); });
+    if(scroll) window.scrollTo({top:0, behavior:'smooth'});
+  }
+  bar.addEventListener('click', function(e){
+    var t = e.target.closest('.tab');
+    if(t) go(t.dataset.p, true);
+  });
+})();
+
+/* ---------------- Visa quiz ---------------- */
+(function(){
+  var ans = {};
+  var step = 0;
+  var TOTAL = 5;
+  var steps = document.querySelectorAll('.qstep');
+  var prog = document.querySelectorAll('#qprog i');
+  var back = document.getElementById('qback');
+  var next = document.getElementById('qnext');
+  var out = document.getElementById('qresult');
+
+  function render(){
+    steps.forEach(function(s,i){ s.classList.toggle('on', i === step); });
+    prog.forEach(function(p,i){ p.classList.toggle('done', i <= step); });
+    back.disabled = (step === 0);
+    next.disabled = !ans[steps[step].querySelector('.opt').dataset.k];
+    next.textContent = (step === TOTAL - 1) ? '查看结果' : '下一题';
+    if(step !== TOTAL - 1) out.style.display = 'none';
+    steps[step].querySelectorAll('.opt').forEach(function(o){
+      o.classList.toggle('sel', ans[o.dataset.k] === o.dataset.v);
+    });
+  }
+
+  document.querySelector('.quiz').addEventListener('click', function(e){
+    var o = e.target.closest('.opt');
+    if(o){
+      ans[o.dataset.k] = o.dataset.v;
+      o.parentNode.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel'); });
+      o.classList.add('sel');
+      next.disabled = false;
+    }
+  });
+
+  back.addEventListener('click', function(){ if(step > 0){ step--; render(); } });
+  next.addEventListener('click', function(){
+    if(step < TOTAL - 1){ step++; render(); } else { show(); }
+  });
+  document.getElementById('qreset').addEventListener('click', function(){
+    ans = {}; step = 0; out.style.display='none'; out.innerHTML='';
+    document.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+    render();
+  });
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+  function pick(){
+    var g = ans.goal, d = ans.dur, m = ans.money, e = ans.effort;
+    var r;
+
+    if(g === 'employ'){
+      r = {name:'Non-B 工作签 + 工作证', en:'Non-Immigrant B + Work Permit',
+        why:'在泰国受雇或在泰取酬，Non-B 是唯一合法路径。先拿 90 天单次，入境后由雇主协助转为 1 年期，并单独申请工作证（Work Permit）。',
+        alts:['只是开会、参展、谈合作而不在泰取酬：旅游签或免签即可，不需要 Non-B'],
+        notice:'不要拿旅游签或免签先干活。遣返 + 1–10 年禁止入境的代价，远高于签证本身的成本。'};
+    } else if(g === 'family'){
+      r = {name:'Non-O 依亲签', en:'Non-Immigrant O (Family)',
+        why:'配偶或子女为泰国籍时走 Non-O。先给 90 天，再在境内延期到 1 年，可逐年续签。',
+        alts:['配偶为外国人但持泰国合法长期居留：同样可走 O 类家属签'],
+        notice:'婚姻或亲属关系证明通常需公证 + 认证 + 泰语翻译，提前准备，别卡在最后一周。'};
+    } else if(g === 'study'){
+      r = {name:'Non-ED 学生签', en:'Non-Immigrant ED',
+        why:'需教育部认可院校的录取函。先给 90 天，入学后由学校协助按学制延长。',
+        alts:['学泰拳、泰式料理、康养这类课程：DTV 的软实力通道期限更长，可能更合适'],
+        notice:'语言学校走 ED 的路径近年审核明显收紧，且仍不能合法打工。'};
+    } else if(g === 'retire'){
+      if(m === 'high'){
+        r = {name:'LTR 长期居留签（富裕退休者）', en:'LTR Visa — Wealthy Pensioner',
+          why:'10 年（5+5）可续、一年报到一次、无需回头签、境外收入汇入免税。门槛为 50 岁以上、被动收入 ≥8 万美元/年；或 4 万美元/年 + 25 万美元在泰投资。',
+          alts:['如果被动收入到不了 8 万美元：Non-O-A 退休长居签（80 万铢 + 保险）更现实',
+                '不想准备材料：精英签 Platinum（150 万铢 / 10 年）也能直接解决长住'],
+          notice:'LTR 由 BOI 审核，从准备到拿签约 8 周，前期文件质量决定成败。'};
+      } else {
+        r = {name:'Non-O-A 退休长居签', en:'Non-Immigrant O-A (Long Stay)',
+          why:'50 岁以上即可申请：80 万铢存款 / 6.5 万铢月收入 / 两者组合。1 年多次入境，逐年续签。',
+          alts: (m === 'mid')
+            ? ['被动收入能达到 8 万美元/年：LTR 的免税待遇高一个量级，值得算一算']
+            : ['资金暂不足 80 万铢：先用免签来探路，在境内转 Non-O 后用月收入通道申请延期'],
+          notice:'两个最常踩的坑：① 资金存期（首申 2 个月 / 续期 3 个月）② 续期时钱必须在泰国银行账户里，海外账户不被接受。'};
+      }
+    } else if(g === 'remote'){
+      if(m === 'low'){
+        r = {name:'先探路，暂不办长期签', en:'Visa Exemption → Decide Later',
+          why:'DTV 需要证明持有 50 万铢（约 10 万元）可用资金，且通常要求申请前已持有约 3 个月。你目前的资金量还不满足。',
+          alts:['先用免签入境 30 天（每 180 天累计不超过 90 天）实地考察城市',
+                '资金到位后再从境外申请 DTV（5 年有效、每次 180 天）'],
+          notice:'DTV 必须在泰国境外申请，不能落地后再转。别买单程票过来等。'};
+      } else if(m === 'high'){
+        r = {name:'LTR 长期居留签（泰国远程工作者）', en:'LTR — Work-from-Thailand Professional',
+          why:'如果你的境外雇主年营收 ≥5,000 万美元、个人年收入 ≥8 万美元，LTR 比 DTV 高一个量级：10 年、一年报到一次、无需回头签、境外收入汇入免税、含数字工作证。',
+          alts:['雇主规模或收入达不到门槛：DTV（5 年、每次 180 天、门槛仅 50 万铢资产）'],
+          notice:'LTR 走 BOI 通道，流程约 8 周，明显慢于 e-Visa，要提前排期。'};
+      } else {
+        r = {name:'DTV 数字游民签', en:'Destination Thailand Visa',
+          why:'最适合旅居型的长期身份：5 年有效、多次入境、每次入境可待 180 天并再延 180 天（单次最长连续 360 天）。门槛只需证明 50 万铢资产 + 有境外远程收入。',
+          alts:['年收入 ≥8 万美元且雇主达标：LTR 更划算（免税 + 10 年 + 工作许可）',
+                '还不确定能否久待：先用免签来住 1–3 个月实地试水，再决定'],
+          notice:'三条硬限制：不能为泰国公司工作、拿不到工作证、多数泰国银行不给开户（KBank 已明文排除 DTV）。'};
+      }
+    } else {
+      if(d === 'd30'){
+        r = {name:'免签入境', en:'Visa Exemption — 30 days',
+          why:'中泰互免协定继续有效，单次停留不超过 30 天。只需护照有效期 ≥6 个月 + 返程机票 + 出发前 72 小时内填妥 TDAC。',
+          alts:['想留出余量、或需要多次往返：直接办旅游签（60 天，可再延 30 天）'],
+          notice:'免签不得从事任何工作；每 180 天内累计停留不得超过 90 天。'};
+      } else if(d === 'd90'){
+        r = {name:'旅游签 TR', en:'Tourist Visa — 60 + 30 days',
+          why:'单次 60 天，落地后可在境内向移民局再延 30 天，合计 90 天，正好覆盖 1–3 个月的需求。',
+          alts:['打算一年内反复往返：办多次入境旅游签（5,000 铢 / 6 个月）'],
+          notice:'每次入境都要重新填 TDAC；从境外回来后要重新报 TM30。'};
+      } else if(d === 'd180'){
+        r = {name:'DTV 或 旅游签 + 境内延期', en:'DTV / Tourist Visa + Extension',
+          why:'想连住 3–6 个月有两条路：① 旅游签 60 天 + 延 30 天 = 90 天，但仍需出境；② 如果有境外远程收入，直接办 DTV——一次可待 180 天（可再延到 360 天），不用反复跑签。',
+          alts:['没有远程收入但预算充裕：精英签 Bronze（65 万铢 / 5 年），一次性解决所有续签麻烦'],
+          notice:'反复出境再入境刷免签会越来越难，且 180 天内累计 90 天是硬上限。'};
+      } else {
+        r = {name:'免签和旅游签都不够用了', en:'A Long-Stay Visa Is Required',
+          why:'想常驻 1 年以上，免签与旅游签都无法支撑。按你的情况，最接近的选项是：有境外远程收入就走 DTV；50 岁以上走退休签；两者都不符合则考虑精英签。',
+          alts:['回上一题把「主要目的」改成更准确的选项，会得到更精确的推荐'],
+          notice:'不要先落地再想办法。在泰国境内能转换的路径非常有限，且成本高、周期长。'};
+      }
+    }
+
+    if(e === 'hate' && r.name.indexOf('精英签') === -1){
+      r.alts = r.alts.concat(['很不想折腾材料：精英签（Bronze 65 万铢 / 5 年，无年龄无收入要求）可以用钱换掉绝大部分手续']);
+    }
+    return r;
+  }
+
+  function show(){
+    var r = pick();
+    var altHtml = '';
+    if(r.alts && r.alts.length){
+      altHtml = '<div class="ralt"><b style="color:var(--ink)">备选方案 / 需要注意</b><ul style="margin-top:8px;margin-bottom:0">'
+        + r.alts.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+    }
+    var noticeHtml = r.notice ? '<div class="warn" style="margin-top:14px"><b>提醒：</b>' + esc(r.notice) + '</div>' : '';
+    out.innerHTML = '<div class="res-card">'
+      + '<div class="rk">主推方案</div>'
+      + '<h4>' + esc(r.name) + '</h4>'
+      + '<div class="ren">' + esc(r.en) + '</div>'
+      + '<div class="rwhy">' + esc(r.why) + '</div>'
+      + noticeHtml
+      + altHtml
+      + '<div style="margin-top:16px;font-size:12.5px;color:var(--ink3)">下一步：切到「04 办理流程」看 e-Visa 具体怎么递。</div>'
+      + '</div>';
+    out.style.display = 'block';
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  render();
+})();
+
+/* ---------------- Cost calculator ---------------- */
+(function(){
+  var state = { city:'bkk', tier:'mid', house:'1br', tran:'none', ins:'mid' };
+
+  var cityF = { bkk:1.00, cnx:0.72, hkt:1.15, pty:0.85 };
+  var tierF = {
+    low : {rent:0.60, util:0.70, food:0.55, tran:0.80, health:0.50, life:0.40, misc:0.70},
+    mid : {rent:1.00, util:1.00, food:1.00, tran:1.00, health:1.00, life:1.00, misc:1.00},
+    high: {rent:2.20, util:1.60, food:2.00, tran:1.80, health:1.80, life:2.20, misc:1.60}
+  };
+  var houseF = { studio:0.65, '1br':1.00, '2br':1.55 };
+  var tranF  = { moto:0.45, none:1.00, car:2.20 };
+  var insF   = { local:0.55, mid:1.00, intl:2.00 };
+
+  var base = { rent:18000, util:3500, food:12000, tran:3500, health:4000, life:5000, misc:2500 };
+  var labels = { rent:'房租', util:'水电与网络', food:'餐饮', tran:'交通', health:'医疗与保险', life:'生活与娱乐', misc:'杂项与合规' };
+  var colors = { rent:'#C08529', util:'#E3B45E', food:'#0E7C6B', tran:'#2AA694', health:'#2C4A87', life:'#7C6BC0', misc:'#A89C8C' };
+  var keys = ['rent','util','food','tran','health','life','misc'];
+  var RATE = 5.0;
+
+  function calc(){
+    var cf = cityF[state.city], tf = tierF[state.tier], hf = houseF[state.house],
+        trf = tranF[state.tran], inf = insF[state.ins];
+    var res = {};
+    keys.forEach(function(k){
+      var v = base[k] * cf * tf[k];
+      if(k === 'rent')   v *= hf;
+      if(k === 'tran')   v *= trf;
+      if(k === 'health') v *= inf;
+      res[k] = Math.round(v / 100) * 100;
+    });
+    return res;
+  }
+
+  function fmt(n){ return n.toLocaleString('en-US'); }
+
+  function draw(){
+    var r = calc();
+    var total = keys.reduce(function(s,k){ return s + r[k]; }, 0);
+    document.getElementById('c-total').textContent = fmt(total);
+    document.getElementById('c-cny').textContent = '≈ ' + fmt(Math.round(total / RATE)) + ' 元 / 月　·　按 1 元 = ' + RATE + ' 铢';
+    document.getElementById('c-year').textContent = fmt(total * 12) + ' 铢 / 年（≈ ' + fmt(Math.round(total * 12 / RATE)) + ' 元）';
+
+    var bars = '', leg = '';
+    keys.forEach(function(k){
+      var pct = r[k] / total * 100;
+      bars += '<i style="width:' + pct.toFixed(1) + '%;background:' + colors[k] + '"></i>';
+      leg += '<div class="leg-row"><span class="dot" style="background:' + colors[k] + '"></span>'
+           + '<span class="lv">' + labels[k] + '</span>'
+           + '<span class="ln">' + fmt(r[k]) + ' 铢<small>' + pct.toFixed(0) + '%　≈' + fmt(Math.round(r[k] / RATE)) + ' 元</small></span></div>';
+    });
+    document.getElementById('c-bars').innerHTML = bars;
+    document.getElementById('c-leg').innerHTML = leg;
+  }
+
+  [['c-city','city'],['c-tier','tier'],['c-house','house'],['c-tran','tran'],['c-ins','ins']].forEach(function(pair){
+    var el = document.getElementById(pair[0]);
+    el.addEventListener('click', function(e){
+      var b = e.target.closest('button');
+      if(!b) return;
+      el.querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      state[pair[1]] = b.dataset.v;
+      draw();
+    });
+  });
+
+  draw();
+})();
+
+/* ---------------- Checklist persistence ---------------- */
+(function(){
+  var KEY = 'th_handbook_checklist_v1';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.ck input'));
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(err){ saved = {}; }
+  boxes.forEach(function(b, i){
+    b.dataset.idx = i;
+    if(saved[i]) b.checked = true;
+    b.addEventListener('change', function(){
+      var s = {};
+      boxes.forEach(function(x){ if(x.checked) s[x.dataset.idx] = 1; });
+      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(err){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
