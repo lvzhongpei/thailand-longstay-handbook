@@ -10,7 +10,9 @@
 
 ## 在线查看
 
-打开 `index.html` 即可（会跳转到手册正文）。
+**直接打开（手机/电脑均可）：<https://thailand-longstay-handbook.app.workbuddy.host/>**
+
+本地查看：打开 `public/index.html`，会跳转到手册正文 `public/泰国旅居手册.html`。
 
 ## 内容结构
 
